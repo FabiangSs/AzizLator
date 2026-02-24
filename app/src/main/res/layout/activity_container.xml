@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0F">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚙️ Container Setup"
+            android:textSize="20sp"
+            android:textColor="#00D4FF"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Container Name -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Container Name" android:textColor="#AAAAAA" android:textSize="12sp" />
+        <EditText
+            android:id="@+id/et_container_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="My Container"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#555555"
+            android:backgroundTint="#1A1A2E"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Wine Version -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Wine Version" android:textColor="#AAAAAA" android:textSize="12sp" />
+        <Spinner
+            android:id="@+id/spinner_wine_version"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:backgroundTint="#00D4FF"
+            android:layout_marginBottom="16dp" />
+
+        <!-- DXVK -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Graphics (DXVK)" android:textColor="#AAAAAA" android:textSize="12sp" />
+        <Spinner
+            android:id="@+id/spinner_dxvk"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:backgroundTint="#00D4FF"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/tv_container_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status: ⚫ Ready"
+            android:textColor="#00FF88"
+            android:textSize="14sp"
+            android:padding="12dp"
+            android:background="#1A1A2E"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/btn_start_container"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="▶ Start Container"
+            android:backgroundTint="#00FF88"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_install_app"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="📦 Install .EXE"
+            android:backgroundTint="#00D4FF"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_stop_container"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="⏹ Stop"
+            android:backgroundTint="#FF4444"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>

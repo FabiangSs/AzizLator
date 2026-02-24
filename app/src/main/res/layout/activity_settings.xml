@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0F">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚙️ Settings"
+            android:textSize="22sp"
+            android:textColor="#00D4FF"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Device Profile Card -->
+        <TextView
+            android:id="@+id/tv_device_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Detecting device..."
+            android:textColor="#AAAAAA"
+            android:textSize="13sp"
+            android:padding="16dp"
+            android:background="#1A1A2E"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_auto_detect"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="🔍 Auto-Detect Best Settings"
+            android:backgroundTint="#1A1A2E"
+            android:textColor="#00D4FF"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Switches -->
+        <Switch
+            android:id="@+id/switch_auto_optimize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🤖 Auto Optimizer"
+            android:textColor="#FFFFFF"
+            android:thumbTint="#00D4FF"
+            android:layout_marginBottom="8dp" />
+
+        <Switch
+            android:id="@+id/switch_dxvk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎮 Enable DXVK (DirectX → Vulkan)"
+            android:textColor="#FFFFFF"
+            android:thumbTint="#00D4FF"
+            android:layout_marginBottom="8dp" />
+
+        <Switch
+            android:id="@+id/switch_force_turnip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚡ Force Turnip Driver (Snapdragon only)"
+            android:textColor="#FFFFFF"
+            android:thumbTint="#00D4FF"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Resolution -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🖥️ Resolution" android:textColor="#AAAAAA" android:textSize="12sp" />
+        <Spinner
+            android:id="@+id/spinner_resolution"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:backgroundTint="#00D4FF"
+            android:layout_marginBottom="16dp" />
+
+        <!-- CPU Cores -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="🔧 CPU Cores" android:textColor="#AAAAAA" android:textSize="12sp" />
+        <Spinner
+            android:id="@+id/spinner_cpu_cores"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:backgroundTint="#00D4FF"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btn_save_settings"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="💾 Save Settings"
+            android:backgroundTint="#00D4FF"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>
