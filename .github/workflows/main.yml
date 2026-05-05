@@ -1,8 +1,8 @@
-name: Compilación del Proyecto
+name: Compilación Android Kotlin
 
 on:
   push:
-    branches: [ main ]  # Se ejecuta al subir cambios a la rama main
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -11,17 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Descargar código del repositorio
-      uses: actions/checkout@v4
+      - name: Descargar código
+        uses: actions/checkout@v4
 
-    - name: Configurar el entorno (ej. Node.js)
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
+      - name: Configurar JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
 
-    - name: Instalar dependencias
-      run: npm install
+      - name: Dar permisos a Gradle
+        run: chmod +x ./gradlew
 
-    - name: Compilar
-      run: npm run build
-      
+      - name: Compilar proyecto
+        run: ./gradlew build
