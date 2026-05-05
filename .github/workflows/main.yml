@@ -1,0 +1,27 @@
+name: Compilación del Proyecto
+
+on:
+  push:
+    branches: [ main ]  # Se ejecuta al subir cambios a la rama main
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Descargar código del repositorio
+      uses: actions/checkout@v4
+
+    - name: Configurar el entorno (ej. Node.js)
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Instalar dependencias
+      run: npm install
+
+    - name: Compilar
+      run: npm run build
+      
